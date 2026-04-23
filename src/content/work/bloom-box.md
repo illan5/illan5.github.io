@@ -1,23 +1,46 @@
 ---
-title: Bloom Box
-publishDate: 2019-12-01 00:00:00
+title: Risk Analytics Dashboard
+publishDate: 2024-08-20 00:00:00
 img: /assets/stock-2.jpg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img_alt: A bright pink sheet of paper curves in front of a rich blue background.
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  A portfolio case study for a dashboard and data workflow focused on monitoring exposure,
+  anomalies, and decision-ready metrics in near real time.
 tags:
-  - Dev
-  - Branding
-  - Backend
+  - Analytics
+  - Finance
+  - BI
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+This project explores how I would design a lightweight but trustworthy analytics stack for risk and performance monitoring. The goal was to move from scattered spreadsheets and manual checks to a clearer operating view with consistent metrics and faster investigation.
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+## The problem
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+Teams often have data, but not enough confidence in it. Metrics are calculated in different places, definitions drift over time, and analysts spend too much effort reconciling numbers instead of interpreting them.
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+For this case study, I focused on three priorities:
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+- centralise key metrics in one modelled source of truth
+- surface unusual patterns quickly
+- make the dashboard useful for both daily monitoring and deeper analysis
+
+## What I designed
+
+I structured the workflow in layers:
+
+- **ingestion** for raw source data and operational event logs
+- **transformation** to standardise business rules and metric definitions
+- **analytics** to expose clean tables for dashboards and alerting
+- **monitoring** to highlight outliers, threshold breaches, and sudden changes in trend
+
+The dashboard itself was designed around questions that decision-makers actually ask: what changed, where it changed, and whether it needs action now.
+
+## Stack and approach
+
+A setup like this works well with tools such as Python, SQL, dbt, a warehouse layer, and a BI tool on top. The technical emphasis was not just on visuals, but on data quality, reproducibility, and definitions that remain stable as the system grows.
+
+I also treated documentation as part of the product: metric naming, source assumptions, and known caveats were all written down so the dashboard could be trusted by more than one person.
+
+## Outcome
+
+The result is a case study that shows how I think about analytics systems: clear modelling, fast access to decision-ready information, and a workflow that helps teams spend less time validating numbers and more time acting on them.
