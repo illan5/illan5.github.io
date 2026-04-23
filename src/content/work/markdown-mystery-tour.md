@@ -1,35 +1,40 @@
 ---
-title: Markdown Mystery Tour
-publishDate: 2020-03-02 00:00:00
+title: Cloud Data Platform
+publishDate: 2024-11-10 00:00:00
 img: /assets/stock-1.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Iridescent ripples of a bright blue and pink liquid.
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  A case study for a modern cloud data platform that ingests raw data, models it into
+  analytics-ready tables, and exposes reliable metrics to the business.
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - Data Engineering
+  - Cloud
+  - Analytics
 ---
 
-## Level-two heading
+This project is a portfolio case study around a problem I find especially interesting: building a solid data platform that can support analytics without becoming fragile or overly complex.
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+## The goal
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+Create a workflow that takes data from multiple operational sources, lands it safely, transforms it with clear business logic, and makes it available in a format that analysts and stakeholders can trust.
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+## Architecture
 
-### Level-three heading
+The platform was designed in layers:
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
+- **raw ingestion** for reproducible source capture
+- **staging models** for cleaning and standardisation
+- **core models** for business entities and shared logic
+- **marts** for reporting, dashboards, and product metrics
 
-### Level-three heading
+I also included orchestration, basic testing, and deployment-friendly structure so the system could be maintained like an engineering product rather than a one-off analytics script.
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+## Principles behind the build
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+A good data platform should make the right thing easy. That means predictable schemas, documented models, version-controlled transformations, and visibility into failures before they become business problems.
 
-#### Level-four heading
+For this reason, the case study focused on observability and maintainability just as much as on throughput or speed.
 
-- We noted this
-- And also this other point
+## Outcome
+
+The result is a strong example of how I think about data engineering: clean foundations, reusable modelling patterns, and a platform that helps teams answer questions faster without losing trust in the numbers.
